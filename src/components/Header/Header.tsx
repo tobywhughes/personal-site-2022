@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+import { HeaderSocials } from "./HeaderSocials";
+import { HeaderTitle } from "./HeaderTitle";
 
-const Header = () => {
+export const Header = () => {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-primary">
-      <div className="flex text-white">
-        <span className="font-semibold text-xl text-white">Toby Hughes</span>
-      </div>
+    <nav className="grid justify-items-center grid-cols-3 flex-wrap bg-primary h-20 p-4">
+      <div />
+      <HeaderTitle />
+      <HeaderSocials />
     </nav>
   );
 };
-
-export default Header;

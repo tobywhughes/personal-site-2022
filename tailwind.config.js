@@ -1,5 +1,6 @@
 // https://coolors.co/22223b-4a4e69-9a8c98-c9ada7-f2e9e4
 const colors = require("tailwindcss/colors");
+const customColors = require("./styles/colors");
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -7,14 +8,12 @@ module.exports = {
   theme: {
     colors: {
       primary: {
-        DEFAULT: "#22223B",
+        DEFAULT: customColors.primary.default,
       },
       secondary: {
-        DEFAULT: "#4A4E69",
+        DEFAULT: customColors.secondary.default,
       },
-      background: {
-        DEFAULT: "#F2E9E4",
-      },
+
       transparent: "transparent",
       current: "currentColor",
       black: colors.black,
@@ -25,8 +24,16 @@ module.exports = {
       yellow: colors.amber,
     },
     extend: {
-      accent: {
-        DEFAULT: "#9A8C98",
+      colors: {
+        background: {
+          DEFAULT: customColors.background.default,
+        },
+        accent: {
+          DEFAULT: customColors.accent.default,
+        },
+      },
+      fontFamily: {
+        sans: ["Space Grotesk", "sans-serif"],
       },
     },
   },
