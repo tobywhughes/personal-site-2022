@@ -1,13 +1,12 @@
 import { NextPage } from "next";
+import Header from "src/components/Header/Header";
 
 const Home: NextPage = () => {
-    return(<>
-        <nav className="flex">
-            <p>
-                test
-            </p>
-        </nav>
-    </>)
-}
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
+};
 
-export default Home
+export default Home;
